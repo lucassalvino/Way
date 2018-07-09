@@ -14,6 +14,7 @@ namespace Way.infra.Persistencia
         }
 
         #region DBSets
+        public DbSet<MapCaracterizacao> Caracterizacao { get; set; }
         public DbSet<MapUsuario> Usuarios { get; set; }
         public DbSet<MapSessaoUsuario> SessaoUsuario{ get; set; }
         #endregion

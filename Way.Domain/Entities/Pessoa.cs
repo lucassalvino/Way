@@ -23,5 +23,7 @@ namespace Way.Domain.Entities
         public List<Endereco> Enderecos { get; set; }
 
         public List<TipoPessoa> TipoPessoa{ get; set; }
+
+        public List<Guid> Caracterizacoes { get; set; }
     }
 }

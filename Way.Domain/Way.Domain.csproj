@@ -11,6 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Resources\DescricaoTabelasPadroes.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DescricaoTabelasPadroes.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\MensagensEntidades.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -19,6 +24,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Resources\DescricaoTabelasPadroes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DescricaoTabelasPadroes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\MensagensEntidades.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MensagensEntidades.Designer.cs</LastGenOutput>
