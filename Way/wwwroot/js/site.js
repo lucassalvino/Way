@@ -1,4 +1,26 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿var Utilitarios = {
+    HostAtual: function () {
+        return (window.location.protocol + "//" + window.location.host);
+    },
+    Redireciona: function (url) {
+        window.location = url;
+    },
+    HeGuidEmpty: function (value) {
+        return (value == "00000000-0000-0000-0000-000000000000");
+    },
+    HeUndefined: function (value) {
+        return (typeof value == "undefined");
+    }
+};
 
-// Write your JavaScript code.
+var Sessao = {
+    ObtemIDSessao: function () {
+        return (localStorage['IDSessao'] || '00000000-0000-0000-0000-000000000000');
+    },
+    SetarIDSessao: function (IdSessao) {
+        localStorage['IDSessao'] = IdSessao;
+    },
+    DesabilitaSessao: function () {
+        localStorage['IDSessao'] = '00000000-0000-0000-0000-000000000000';
+    }
+};

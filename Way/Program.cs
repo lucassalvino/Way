@@ -16,9 +16,11 @@ namespace Way
         {
             CreateWebHostBuilder(args).Build().Run();
         }
-
+        //.UseUrls($"http://localhost:{Config.Instance.RunPort.ToString()};http://*:{(Config.Instance.RunPort+1).ToString()}")
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+            .UseUrls("http://localhost:4999", "http://*:5000")
+            .UseKestrel()
+            .UseStartup<Startup>();
     }
 }

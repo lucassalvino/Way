@@ -1,37 +1,27 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
-for details on configuring this project to bundle and minify static web assets. */
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿/*Personalização scroll*/
+::-webkit-scrollbar {
+    width: 12px;
 }
-
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 20px #20272C;
+    border-radius: 0px;
 }
-
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+::-webkit-scrollbar-thumb {
+    background: #20272C;
+    border-radius: 50px;
 }
-
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+::-webkit-scrollbar-thumb:hover {
+    background: #273742;
 }
-
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+/*Fim Personalização scroll*/
+/*Preloader para elemento*/
+.preloader-animation:after {
+    border-top-color: #004F14 !important;
 }
-
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+.preloader-animation:before {
+    border-top-color: #20272C !important;
 }
+.preloader-animation {
+    border-top-color: #FFB511 !important;
+}
+/*Fim Preloader para elemento*/

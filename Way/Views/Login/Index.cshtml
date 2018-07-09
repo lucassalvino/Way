@@ -1,0 +1,56 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Systems Way</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.css" />
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/Login.css"  type="text/css" />
+    <link href="~/iziToast/dist/css/iziToast.min.css" rel="stylesheet" type="text/css">
+    <link href="~/jQuery-Preloader/src/css/preloader.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col s5 offset-s3 ">
+                    <div class="card center-align">
+                        <div class="card-content">
+                            <div>
+                                <img class="responsive-img" style="max-width: 250px;" src="~/images/tipograma.png" />
+                            </div>
+                            <div class="row">
+                                <div id="formLogin">
+                                    <div class="left-align">
+                                        <div class="col s12">
+                                            <label class="CustomFontWay16">Usuário</label>
+                                            <input class="CustomFontWay16" type="text" id="UserName"/>
+                                        </div>
+                                        <div class="col s12">
+                                            <label class="CustomFontWay16">Senha</label>
+                                            <input class="CustomFontWay16" type="password" id="UserPasswd"/>
+                                        </div>
+                                    </div>
+                                    <div class="right-align">
+                                        <button id="BtnLogin" class="btn btn-primary CustomFontWay14">Logar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div align="right"><a href="#" class="CustomFontWay16">Recuperar Senha</a> | <a href="#" class="CustomFontWay16">Solicitar Acesso</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="~/iziToast/src/js/iziToast.js"></script>
+    <script src="~/jQuery-Preloader/src/js/jquery.preloader.min.js"></script>
+    <script src="~/js/Componentes/Loader.js"></script>
+    <script src="~/js/Componentes/Alerts.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/Views/login.js"></script>
+</body>
+</html>
