@@ -153,6 +153,9 @@
   <data name="ParcelasCarnePositivas" xml:space="preserve">
     <value>O número de parcelas deve ser maior que zero</value>
   </data>
+  <data name="PessoaPrecisaDeAoMenosUmDocumento" xml:space="preserve">
+    <value>Uma pessoa não pode ser cadastrada sem ao menos um documento</value>
+  </data>
   <data name="PessoaResponsavelCarne" xml:space="preserve">
     <value>Deve existir uma pessoa responsável pelo carne</value>
   </data>

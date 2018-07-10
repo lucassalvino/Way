@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Way.Domain.Enum;
+using Way.Domain.Resources;
 
 namespace Way.Domain.Entities
 {
@@ -16,14 +16,27 @@ namespace Way.Domain.Entities
 
         public String Site { get; set; }
 
-        public List<String> Documentos { get; set; }
+        public List<Documento> Documentos { get; set; }
 
-        public List<String> Emails { get; set; }
+        public List<Email> Emails { get; set; }
 
         public List<Endereco> Enderecos { get; set; }
 
-        public List<TipoPessoa> TipoPessoa{ get; set; }
-
         public List<Guid> Caracterizacoes { get; set; }
+
+        public override void ExecuteValidation()
+        {
+            if (Emails != null)
+                foreach (Email email in Emails)
+                    AddNotifications(email);
+
+            if (Documentos != null)
+                foreach (Documento documento in Documentos)
+                    AddNotifications(documento);
+            else
+                AddNotifications(MensagensEntidades.PessoaPrecisaDeAoMenosUmDocumento);
+
+        }
+
     }
 }

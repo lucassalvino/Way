@@ -135,4 +135,13 @@
   <data name="CaracterizacaoResponsavel" xml:space="preserve">
     <value>Responsável</value>
   </data>
+  <data name="TipoDocumentoCNH" xml:space="preserve">
+    <value>CNH</value>
+  </data>
+  <data name="TipoDocumentoCNPJ" xml:space="preserve">
+    <value>CNPJ</value>
+  </data>
+  <data name="TipoDocumentoCPF" xml:space="preserve">
+    <value>CPF</value>
+  </data>
 </root>

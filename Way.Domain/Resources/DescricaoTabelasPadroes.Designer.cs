@@ -113,5 +113,32 @@ namespace Way.Domain.Resources {
                 return ResourceManager.GetString("CaracterizacaoResponsavel", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CNH.
+        /// </summary>
+        public static string TipoDocumentoCNH {
+            get {
+                return ResourceManager.GetString("TipoDocumentoCNH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CNPJ.
+        /// </summary>
+        public static string TipoDocumentoCNPJ {
+            get {
+                return ResourceManager.GetString("TipoDocumentoCNPJ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CPF.
+        /// </summary>
+        public static string TipoDocumentoCPF {
+            get {
+                return ResourceManager.GetString("TipoDocumentoCPF", resourceCulture);
+            }
+        }
     }
 }

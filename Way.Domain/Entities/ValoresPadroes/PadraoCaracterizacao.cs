@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Way.Domain.Resources;
 
 namespace Way.Domain.Entities.ValoresPadroes
 {
@@ -52,6 +51,24 @@ namespace Way.Domain.Entities.ValoresPadroes
             {
                 return new Guid("64825686-2C37-4DDF-84B1-D843031ED051");
             }
+        }
+
+        public static String DescricaoCaracterizacao(Guid Id)
+        {
+            String GuidId = Id.ToString().ToUpper();
+            if (GuidId.Equals(Fisica.ToString().ToUpper()))
+                return DescricaoTabelasPadroes.CaracterizacaoFisica;
+            if (GuidId.Equals(Juridica.ToString().ToUpper()))
+                return DescricaoTabelasPadroes.CaracterizacaoJuridica;
+            if (GuidId.Equals(Empresa.ToString().ToUpper()))
+                return DescricaoTabelasPadroes.CaracterizacaoEmpresa;
+            if (GuidId.Equals(Aluno.ToString().ToUpper()))
+                return DescricaoTabelasPadroes.CaracterizacaoAluno;
+            if (GuidId.Equals(Motorista.ToString().ToUpper()))
+                return DescricaoTabelasPadroes.CaracterizacaoMotorista;
+            if (GuidId.Equals(Responsavel.ToString().ToUpper()))
+                return DescricaoTabelasPadroes.CaracterizacaoResponsavel;
+            return String.Empty;
         }
     }
 }

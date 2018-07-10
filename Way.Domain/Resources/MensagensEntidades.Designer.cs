@@ -169,6 +169,15 @@ namespace Way.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Uma pessoa não pode ser cadastrada sem ao menos um documento.
+        /// </summary>
+        public static string PessoaPrecisaDeAoMenosUmDocumento {
+            get {
+                return ResourceManager.GetString("PessoaPrecisaDeAoMenosUmDocumento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deve existir uma pessoa responsável pelo carne.
         /// </summary>
         public static string PessoaResponsavelCarne {

@@ -15,8 +15,11 @@ namespace Way.infra.Persistencia
 
         #region DBSets
         public DbSet<MapCaracterizacao> Caracterizacao { get; set; }
+        public DbSet<MapTipoDocumento> TipoDocumento { get; set; }
         public DbSet<MapUsuario> Usuarios { get; set; }
         public DbSet<MapSessaoUsuario> SessaoUsuario{ get; set; }
+        public DbSet<MapEmails> Emails{ get; set; }
+        public DbSet<MapDocumento> Documentos { get; set; }
         #endregion
     }
 }

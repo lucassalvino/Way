@@ -57,6 +57,38 @@ namespace Way.infra.Persistencia
                 context.SaveChanges();
             }
             #endregion
+
+            #region Tipo Documento
+            if (!context.TipoDocumento.Any())
+            {
+                context.TipoDocumento.Add(new MapTipoDocumento()
+                {
+                    Ativo = true,
+                    Descricao = DescricaoTabelasPadroes.TipoDocumentoCPF,
+                    Id = PadraoTipoDocumento.CPF
+                });
+
+                context.TipoDocumento.Add(new MapTipoDocumento()
+                {
+                    Ativo = true,
+                    Descricao = DescricaoTabelasPadroes.TipoDocumentoCNPJ,
+                    Id = PadraoTipoDocumento.CNPJ
+                });
+
+                context.TipoDocumento.Add(new MapTipoDocumento()
+                {
+                    Ativo = true,
+                    Descricao = DescricaoTabelasPadroes.TipoDocumentoCNH,
+                    Id = PadraoTipoDocumento.CNH
+                });
+
+                context.SaveChanges();
+            }
+            #endregion
+
+            #region Pessoa
+            
+            #endregion
         }
     }
 }

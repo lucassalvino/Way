@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Way.infra.Persistencia;
 
 namespace Way.Migrations
 {
     [DbContext(typeof(WayContext))]
-    partial class WayContextModelSnapshot : ModelSnapshot
+    [Migration("20180710030253_Caracterizacao_TipoDocumento_Emails")]
+    partial class Caracterizacao_TipoDocumento_Emails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,29 +35,6 @@ namespace Way.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Caracterizacao");
-                });
-
-            modelBuilder.Entity("Way.infra.Mapeadores.MapDocumento", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<bool>("Ativo");
-
-                    b.Property<string>("Documento")
-                        .HasMaxLength(30);
-
-                    b.Property<Guid>("PessoaID");
-
-                    b.Property<Guid>("TipoDocumentoID");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PessoaID");
-
-                    b.HasIndex("TipoDocumentoID");
-
-                    b.ToTable("Documentos");
                 });
 
             modelBuilder.Entity("Way.infra.Mapeadores.MapEmails", b =>
@@ -153,19 +132,6 @@ namespace Way.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
-                });
-
-            modelBuilder.Entity("Way.infra.Mapeadores.MapDocumento", b =>
-                {
-                    b.HasOne("Way.infra.Mapeadores.MapPessoa", "Pessoa")
-                        .WithMany()
-                        .HasForeignKey("PessoaID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Way.infra.Mapeadores.MapTipoDocumento", "TipoDocumento")
-                        .WithMany()
-                        .HasForeignKey("TipoDocumentoID")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Way.infra.Mapeadores.MapEmails", b =>
