@@ -4,6 +4,7 @@ using Way.Domain.Arguments;
 using Way.Domain.Arguments.Filters;
 using Way.Domain.Arguments.Request;
 using Way.Domain.Arguments.Respost;
+using Way.Domain.Arguments.Respost.Views;
 using Way.Domain.Interfaces.Repositories;
 using Way.Domain.Interfaces.Services;
 

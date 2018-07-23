@@ -17,7 +17,7 @@ namespace Way.Domain.Entities
 
         public String Cor { get; set; }
 
-        public override void ExecuteValidation()
+        protected override void ExecuteValidation()
         {
             if (string.IsNullOrEmpty(Marca))
                 AddNotifications(MensagensEntidades.MarcaVeicuiloObrigatorio);

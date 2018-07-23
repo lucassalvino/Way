@@ -10,15 +10,10 @@ namespace Way.infra.Mapeadores
         [MaxLength(30)]
         public String Documento { get; set; }
 
-        public Guid TipoDocumentoID { get; set; }
+        public Guid TipoDocumentoID { get; set; } 
 
         [ForeignKey("TipoDocumentoID")]
         public MapTipoDocumento TipoDocumento { get; set; }
-
-        public Guid PessoaID { get; set; }
-
-        [ForeignKey("PessoaID")]
-        public MapPessoa Pessoa { get; set; }
 
         public static explicit operator MapDocumento(Documento value)
         {
@@ -27,7 +22,6 @@ namespace Way.infra.Mapeadores
                 Ativo = value.Ativo,
                 Documento = value.ValorDocumento,
                 Id = value.Id,
-                PessoaID = value.Pessoa,
                 TipoDocumentoID = value.TipoDocumento
             };
         }

@@ -31,7 +31,7 @@ namespace Way.infra.Mapeadores
                 Ativo = value.Ativo,
                 DataInicioSessao = value.InicioSessao,
                 UsuarioID = IdUsuario,
-                Usuario = (MapUsuario)value.Usuario
+                Usuario = value.Usuario == null? null : (MapUsuario)value.Usuario
             };
         }
     }

@@ -1,7 +1,10 @@
-﻿namespace Way.Domain.Arguments
+﻿using System;
+
+namespace Way.Domain.Arguments
 {
     public class BaseFiltro
     {
-        public int IdEntidade { get; set; }
+        public Guid IdEntidade { get; set; }
+        public Guid IdSessao{ get; set; }
     }
 }

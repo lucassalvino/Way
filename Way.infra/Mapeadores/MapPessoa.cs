@@ -1,4 +1,5 @@
 ﻿using System;
+using Way.Domain.Entities;
 
 namespace Way.infra.Mapeadores
 {
@@ -13,5 +14,21 @@ namespace Way.infra.Mapeadores
         public DateTime DataNascimento { get; set; }
 
         public String Site { get; set; }
+
+        public static explicit operator MapPessoa(Pessoa value)
+        {
+            VerificaNotificacoes(value);
+
+            return new MapPessoa()
+            {
+                Ativo = value.Ativo,
+                DataCadastro = value.DataCadastro,
+                DataNascimento = value.DataNascimento,
+                Id = value.Id,
+                PrimeiroNome = value.PrimeiroNome,
+                Site = value.Site,
+                UltimoNome = value.UltimoNome
+            };
+        }
     }
 }

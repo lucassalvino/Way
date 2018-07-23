@@ -44,3 +44,14 @@ $("#BtnLogin").on("click", function () {
     };
     LoginController.Post(post);
 });
+
+$(document).ready(function () {
+    if (!Utilitarios.HeGuidEmpty(Sessao.ObtemIDSessao())) {
+        Utilitarios.Redireciona(Utilitarios.HostAtual() + "/home");
+    }
+});
+
+$(document).keypress(function (e) {
+    if (e.which == 13) $('#BtnLogin').click();
+});
+

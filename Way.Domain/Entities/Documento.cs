@@ -7,7 +7,5 @@ namespace Way.Domain.Entities
         public String ValorDocumento { get; set; }
 
         public Guid TipoDocumento { get; set; }
-
-        public Guid Pessoa { get; set; }
     }
 }

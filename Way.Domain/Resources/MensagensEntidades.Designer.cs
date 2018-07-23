@@ -97,6 +97,24 @@ namespace Way.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to E-mail não é válido.
+        /// </summary>
+        public static string EmailInvalido {
+            get {
+                return ResourceManager.GetString("EmailInvalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Um erro ocorreu ao executar a operação {0}.
+        /// </summary>
+        public static string ErroAoRealizarOperacao {
+            get {
+                return ResourceManager.GetString("ErroAoRealizarOperacao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Um erro inesperado acaba de acontecer, reporte o erro descrevendo qual operação esta realizando.
         /// </summary>
         public static string ErroInesperado {
@@ -196,11 +214,38 @@ namespace Way.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A confirmação da senha difere da senha informada.
+        /// </summary>
+        public static string SenhaDivergente {
+            get {
+                return ResourceManager.GetString("SenhaDivergente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A senha deve não pode estar em branco.
         /// </summary>
         public static string SenhaObrigatoria {
             get {
                 return ResourceManager.GetString("SenhaObrigatoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A senha deve ter pelo menos seis (6) caracteres.
+        /// </summary>
+        public static string TamanhoSenhaIncorreto {
+            get {
+                return ResourceManager.GetString("TamanhoSenhaIncorreto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuário salvo com sucesso!.
+        /// </summary>
+        public static string UsuarioSalvo {
+            get {
+                return ResourceManager.GetString("UsuarioSalvo", resourceCulture);
             }
         }
     }

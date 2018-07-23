@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace Way.Domain.Services
 {
@@ -18,6 +19,19 @@ namespace Way.Domain.Services
         }
 
         public String FolderLog { get; private set; }
+
+        public void AddLogByExceptionAsync(Exception Erro, String Requisicao = "")
+        {
+            Task.Run(()=> {
+                AddLog($"{Erro.Message} \n\n\nStackTrace: {Erro.StackTrace}  \n\n\nDados Request: {Requisicao}");
+            });
+        }
+
+        public void AddLogAsync(String Message)
+        {
+            Task.Run(() => { AddLog(Message); });
+        }
+
 
         public void AddLog(String Message)
         {

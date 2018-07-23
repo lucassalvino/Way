@@ -10,7 +10,7 @@ namespace Way.Domain.Entities
 
         public Guid UsuarioId { get; set; }
 
-        public override void ExecuteValidation()
+        protected override void ExecuteValidation()
         {
             if (Usuario == null && (UsuarioId == null || UsuarioId == Guid.Empty))
                 AddNotifications("Não é possível criar uma sessão sem um usuário");

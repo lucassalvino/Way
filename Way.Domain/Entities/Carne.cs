@@ -11,7 +11,7 @@ namespace Way.Domain.Entities
 
         public DateTime DataVencimento { get; set; }
 
-        public override void ExecuteValidation()
+        protected override void ExecuteValidation()
         {
             if (DataVencimento == null || DataVencimento == DateTime.MinValue)
                 AddNotifications(String.Format(MensagensEntidades.DataDeveSerInformada, MensagensEntidades.DataVencimento));

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Way.Base.ControllerBase;
+using Way.Domain.Arguments.Filters;
 using Way.Domain.Arguments.Request;
 using Way.Domain.Arguments.Respost;
 using Way.Domain.Resources;
@@ -23,6 +24,36 @@ namespace Way.Controllers.Api
 
             _Service = new UsuarioService(new DefRepositorioUsuario(DBContext));
 
+        }
+
+        [HttpGet]
+        public IActionResult Usuarios(FiltroUsuario Filtro)
+        {
+            try
+            {
+                bool Ativa = _Service.SessaoAtiva(Filtro.IdSessao);
+                if (!Ativa) Redirect("/login");
+                return new JsonResult(_Service.ListarUsuario(Filtro));
+            }
+            catch(Exception Erro)
+            {
+                Task.Run(() => { ServicoLog.AddLog(Erro.Message); });
+            }
+            return new JsonResult(MensagensEntidades.ErroInesperado);
+        }
+
+        [HttpPost]
+        public IActionResult CadastroUsuario (UsuarioRequest Data)
+        {
+            try
+            {
+                return new JsonResult(_Service.CadastraUsuario(Data));
+            }
+            catch(Exception Erro)
+            {
+                ServicoLog.AddLogByExceptionAsync(Erro, Data.ToString());
+            }
+            return new JsonResult(MensagensEntidades.ErroInesperado);
         }
     }
 }

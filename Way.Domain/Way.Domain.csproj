@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
-    <PackageReference Include="BasisForDeveloper" Version="1.0.3" />
+    <PackageReference Include="BasisForDeveloper" Version="1.0.4" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
@@ -21,6 +21,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>MensagensEntidades.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\Operacaoes.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Operacaoes.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +36,10 @@
     <EmbeddedResource Update="Resources\MensagensEntidades.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MensagensEntidades.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Operacaoes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Operacaoes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

@@ -10,6 +10,13 @@ namespace Way.infra.Persistencia
     {
         public static void InicializaDadosPadroes(WayContext context)
         {
+            #region PessoaPadrao
+            Pessoa pessoa = PadraoPessoa.SystemsWay;
+            if (!context.Pessoas.Any())
+                context.Pessoas.Add((MapPessoa)pessoa);
+            context.SaveChanges();
+            #endregion
+
             Usuario adm = PadraoUsuario.Admin;
             if (!context.Usuarios.Any())
                 context.Usuarios.Add((MapUsuario)adm);

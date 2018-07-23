@@ -8,7 +8,7 @@ namespace Way.Domain.Entities
 
         public bool Validado { get; set; }
 
-        public override void ExecuteValidation()
+        protected override void ExecuteValidation()
         {
             ValidEmail(this.Endereco);
         }

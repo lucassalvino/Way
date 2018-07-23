@@ -33,7 +33,7 @@ namespace Way.Controllers.Api
             }
             catch (Exception Erro)
             {
-                Task.Run(() => { ServicoLog.AddLog(Erro.Message); });
+                ServicoLog.AddLogAsync(Erro.Message);
             }
             return new JsonResult(MensagensEntidades.ErroInesperado);
         }

@@ -11,11 +11,12 @@ namespace Way.Domain.Entities.ValoresPadroes
                 return new Usuario()
                 {
                     Ativo = true,
-                    InstituicaoID = Guid.Empty,
+                    InstituicaoID = PadraoPessoa.SystemsWay.Id,
                     Login = "admin",
                     Email = "lucassalvino1@gmail.com",
-                    Senha = Util.HashSHA256("D26m04a03"),
-                    Id = new Guid("365D3127-5924-4C83-9ADF-90483E9FD4F9")
+                    Senha = "D26m04a03",
+                    Id = new Guid("365D3127-5924-4C83-9ADF-90483E9FD4F9"),
+                    Nome = "Admin"
                 };
             }
         }

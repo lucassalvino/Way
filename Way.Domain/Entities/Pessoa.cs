@@ -24,7 +24,7 @@ namespace Way.Domain.Entities
 
         public List<Guid> Caracterizacoes { get; set; }
 
-        public override void ExecuteValidation()
+        protected override void ExecuteValidation()
         {
             if (Emails != null)
                 foreach (Email email in Emails)

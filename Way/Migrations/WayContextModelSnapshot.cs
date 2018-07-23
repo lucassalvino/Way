@@ -35,6 +35,22 @@ namespace Way.Migrations
                     b.ToTable("Caracterizacao");
                 });
 
+            modelBuilder.Entity("Way.infra.Mapeadores.MapCoordernada", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<bool>("Ativo");
+
+                    b.Property<double>("Latitude");
+
+                    b.Property<double>("Longitude");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Coordenadas");
+                });
+
             modelBuilder.Entity("Way.infra.Mapeadores.MapDocumento", b =>
                 {
                     b.Property<Guid>("Id")
@@ -45,13 +61,9 @@ namespace Way.Migrations
                     b.Property<string>("Documento")
                         .HasMaxLength(30);
 
-                    b.Property<Guid>("PessoaID");
-
                     b.Property<Guid>("TipoDocumentoID");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PessoaID");
 
                     b.HasIndex("TipoDocumentoID");
 
@@ -76,6 +88,30 @@ namespace Way.Migrations
                     b.ToTable("Emails");
                 });
 
+            modelBuilder.Entity("Way.infra.Mapeadores.MapEndereco", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<bool>("Ativo");
+
+                    b.Property<string>("Cep");
+
+                    b.Property<Guid>("CoordenadaID");
+
+                    b.Property<string>("Descricao");
+
+                    b.Property<string>("IE");
+
+                    b.Property<string>("Observacao");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CoordenadaID");
+
+                    b.ToTable("Enderecos");
+                });
+
             modelBuilder.Entity("Way.infra.Mapeadores.MapPessoa", b =>
                 {
                     b.Property<Guid>("Id")
@@ -95,7 +131,7 @@ namespace Way.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MapPessoa");
+                    b.ToTable("Pessoas");
                 });
 
             modelBuilder.Entity("Way.infra.Mapeadores.MapSessaoUsuario", b =>
@@ -142,9 +178,15 @@ namespace Way.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
+                    b.Property<Guid>("InstituicaoID");
+
                     b.Property<string>("Login")
                         .IsRequired()
                         .HasMaxLength(64);
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(100);
 
                     b.Property<string>("Senha")
                         .IsRequired()
@@ -152,16 +194,13 @@ namespace Way.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("InstituicaoID");
+
                     b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("Way.infra.Mapeadores.MapDocumento", b =>
                 {
-                    b.HasOne("Way.infra.Mapeadores.MapPessoa", "Pessoa")
-                        .WithMany()
-                        .HasForeignKey("PessoaID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("Way.infra.Mapeadores.MapTipoDocumento", "TipoDocumento")
                         .WithMany()
                         .HasForeignKey("TipoDocumentoID")
@@ -176,11 +215,27 @@ namespace Way.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("Way.infra.Mapeadores.MapEndereco", b =>
+                {
+                    b.HasOne("Way.infra.Mapeadores.MapCoordernada", "Coordenada")
+                        .WithMany()
+                        .HasForeignKey("CoordenadaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Way.infra.Mapeadores.MapSessaoUsuario", b =>
                 {
                     b.HasOne("Way.infra.Mapeadores.MapUsuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Way.infra.Mapeadores.MapUsuario", b =>
+                {
+                    b.HasOne("Way.infra.Mapeadores.MapPessoa", "Instituicao")
+                        .WithMany()
+                        .HasForeignKey("InstituicaoID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

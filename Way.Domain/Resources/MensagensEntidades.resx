@@ -129,6 +129,12 @@
   <data name="DataVencimento" xml:space="preserve">
     <value>Data de vencimento</value>
   </data>
+  <data name="EmailInvalido" xml:space="preserve">
+    <value>E-mail não é válido</value>
+  </data>
+  <data name="ErroAoRealizarOperacao" xml:space="preserve">
+    <value>Um erro ocorreu ao executar a operação {0}</value>
+  </data>
   <data name="ErroInesperado" xml:space="preserve">
     <value>Um erro inesperado acaba de acontecer, reporte o erro descrevendo qual operação esta realizando</value>
   </data>
@@ -162,7 +168,16 @@
   <data name="PlacaVeiculoObrigatoria" xml:space="preserve">
     <value>A plca do veículo é obrigatória</value>
   </data>
+  <data name="SenhaDivergente" xml:space="preserve">
+    <value>A confirmação da senha difere da senha informada</value>
+  </data>
   <data name="SenhaObrigatoria" xml:space="preserve">
     <value>A senha deve não pode estar em branco</value>
+  </data>
+  <data name="TamanhoSenhaIncorreto" xml:space="preserve">
+    <value>A senha deve ter pelo menos seis (6) caracteres</value>
+  </data>
+  <data name="UsuarioSalvo" xml:space="preserve">
+    <value>Usuário salvo com sucesso!</value>
   </data>
 </root>

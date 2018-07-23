@@ -20,6 +20,9 @@ namespace Way.infra.Persistencia
         public DbSet<MapSessaoUsuario> SessaoUsuario{ get; set; }
         public DbSet<MapEmails> Emails{ get; set; }
         public DbSet<MapDocumento> Documentos { get; set; }
+        public DbSet<MapCoordernada> Coordenadas { get; set; }
+        public DbSet<MapEndereco> Enderecos { get; set; }
+        public DbSet<MapPessoa> Pessoas { get; set; }
         #endregion
     }
 }

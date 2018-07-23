@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Way.Domain.Arguments;
 using Way.Domain.Arguments.Filters;
 using Way.Domain.Arguments.Request;
 using Way.Domain.Arguments.Respost;
+using Way.Domain.Arguments.Respost.Views;
 
 namespace Way.Domain.Interfaces.Repositories
 {
@@ -19,9 +19,9 @@ namespace Way.Domain.Interfaces.Repositories
 
         UsuarioRespost CadastraUsuario(UsuarioRequest Usuario);
 
-        BaseArgumentos EditaUsuario(Guid IdUsuario, UsuarioRequest Usuario);
+        UsuarioRespost EditaUsuario(Guid IdUsuario, UsuarioRequest Usuario);
 
-        BaseArgumentos Inativar(Guid IdUsuario);
+        UsuarioRespost Inativar(Guid IdUsuario);
 
         List<UsuarioView> ListarUsuario(FiltroUsuario Filtro);
     } 

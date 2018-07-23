@@ -7,9 +7,23 @@ namespace Way.Domain.Arguments
     {
         public String Menssagem { get; set; }
 
-        public String Error { get; set; }
+        public String ErrorMessage { get; set; }
 
-        public String Codigo { get; set; }
+        public Boolean Error { get; set; }
+
+        public Guid IdSessao { get; set; }
+
+        public object Alertas { get; set; }
+
+        public void DefineErro()
+        {
+            Error = true;
+        }
+
+        public void DefineSucess()
+        {
+            Error = false;
+        }
 
         public override string ToString()
         {
