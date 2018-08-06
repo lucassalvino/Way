@@ -8,8 +8,7 @@ namespace Way.Controllers
     public class LoginController : BaseController
     {
         public LoginController(WayContext DBContext) : base(DBContext)
-        {
-        }
+        {}
 
         public IActionResult Index()
         {

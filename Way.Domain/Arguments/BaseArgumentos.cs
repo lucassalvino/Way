@@ -15,6 +15,8 @@ namespace Way.Domain.Arguments
 
         public object Alertas { get; set; }
 
+        public Boolean Ativo { get; set; }
+
         public void DefineErro()
         {
             Error = true;

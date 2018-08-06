@@ -10,7 +10,6 @@ namespace Way.Domain.Arguments.Request
         public String ReSenha { get; set; }
         public String Email { get; set; }
         public String Nome { get; set; }
-        public Boolean Ativo { get; set; }
         public Guid IdUsuario { get; set; }
 
         public static explicit operator Usuario(UsuarioRequest Value)

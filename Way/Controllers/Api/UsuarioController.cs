@@ -16,11 +16,11 @@ using Way.infra.Persistencia;
 namespace Way.Controllers.Api
 {
     [Route("api/[controller]")]
-    public class Usuario : BaseController
+    public class UsuarioController : BaseController
     {
         private UsuarioService _Service = null;
 
-        public Usuario(WayContext DBContext) : base(DBContext){
+        public UsuarioController(WayContext DBContext) : base(DBContext){
 
             _Service = new UsuarioService(new DefRepositorioUsuario(DBContext));
 
