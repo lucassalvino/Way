@@ -18,21 +18,21 @@
 
 var Sessao = {
     ObtemIDSessao: function () {
-        return (sessionStorage['IDSessao'] || '00000000-0000-0000-0000-000000000000');
+        return (localStorage['IDSessao'] || '00000000-0000-0000-0000-000000000000');
     },
     SetarIDSessao: function (IdSessao) {
-        sessionStorage['IDSessao'] = IdSessao;
+        localStorage['IDSessao'] = IdSessao;
     },
     DesabilitaSessao: function () {
-        sessionStorage['IDSessao'] = '00000000-0000-0000-0000-000000000000';
+        localStorage['IDSessao'] = '00000000-0000-0000-0000-000000000000';
     },
     SetarDadoTemporario: function (chave, dado) {
         if (chave)
-            sessionStorage[chave] = dado;
+            localStorage[chave] = dado;
     },
     GetDadoTemporario: function (chave) {
         if (chave)
-            return sessionStorage[chave];
+            return localStorage[chave];
         return null;
     }
     

@@ -11,7 +11,7 @@ var AlertMessages =
             id: 'success',
             title: Titulo,
             message: Message,
-            position: 'bottomRight',
+            position: 'topRight',
             transitionIn: 'bounceInLeft',
             // iconText: 'star',
             onOpened: function (instance, toast) {
@@ -30,7 +30,7 @@ var AlertMessages =
             id: 'error',
             title: Titulo,
             message: Message,
-            position: 'bottomRight',
+            position: 'topRight',
             transitionIn: 'fadeInDown'
         });
     },
@@ -43,7 +43,7 @@ var AlertMessages =
             id: 'warning',
             title: Titulo,
             message: Message,
-            position: 'bottomRight',
+            position: 'topRight',
             close: true,
             transitionIn: 'flipInX',
             transitionOut: 'flipOutX'
@@ -59,7 +59,7 @@ var AlertMessages =
             id: 'info',
             title: Titulo,
             message: Message,
-            position: 'bottomRight',
+            position: 'topRight',
             transitionIn: 'bounceInRight',
         });
     },

@@ -23,7 +23,6 @@ namespace Way.Controllers.Api
         public UsuarioController(WayContext DBContext) : base(DBContext){
 
             _Service = new UsuarioService(new DefRepositorioUsuario(DBContext));
-
         }
 
         [HttpGet]

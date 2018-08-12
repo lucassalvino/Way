@@ -1,6 +1,7 @@
 ﻿using BasisForDeveloper.NotificationPattern;
 using Newtonsoft.Json;
 using System;
+
 namespace Way.Domain.Entities
 {
     public class BaseEntidade : Notification

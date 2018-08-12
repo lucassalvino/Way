@@ -16,6 +16,8 @@ namespace Way.Domain.Services
 
         public UsuarioService(IUsuarioRepositorio usuarioRepositorio)
         {
+            if(usuarioRepositorio == null)
+                throw new Exception("Definição do repositório é obrigatório");
             _usuarioRepositorio = usuarioRepositorio;
         }
 

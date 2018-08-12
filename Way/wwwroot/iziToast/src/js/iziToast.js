@@ -25,7 +25,7 @@
 		ISCHROME = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor),
 		ISFIREFOX = typeof InstallTrigger !== 'undefined',
 		ACCEPTSTOUCH = 'ontouchstart' in document.documentElement,
-		POSITIONS = ['bottomRight','bottomLeft','bottomCenter','topRight','topLeft','topCenter','center'],
+		POSITIONS = ['topRight','bottomLeft','bottomCenter','topRight','topLeft','topCenter','center'],
 		THEMES = {
 			info: {
 				color: 'blue',
@@ -81,7 +81,7 @@
 		closeOnEscape: false,
 		closeOnClick: false,
 		rtl: false,
-		position: 'bottomRight', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter, center
+		position: 'topRight', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter, center
 		target: '',
 		targetFirst: true,
 		toastOnce: false,
@@ -1040,7 +1040,7 @@
 				}
 
 				if(ISMOBILE || window.innerWidth <= MOBILEWIDTH){
-					if(settings.position == 'bottomLeft' || settings.position == 'bottomRight' || settings.position == 'bottomCenter'){
+					if(settings.position == 'bottomLeft' || settings.position == 'topRight' || settings.position == 'bottomCenter'){
 						position = PLUGIN_NAME+'-wrapper-bottomCenter';
 					}
 					else if(settings.position == 'topLeft' || settings.position == 'topRight' || settings.position == 'topCenter'){
