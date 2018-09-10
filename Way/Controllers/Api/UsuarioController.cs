@@ -36,7 +36,7 @@ namespace Way.Controllers.Api
             }
             catch(Exception Erro)
             {
-                Task.Run(() => { ServicoLog.AddLog(Erro.Message); });
+                ServicoLog.AddLogAsync($"Mensagem: [{Erro.Message}] Pilha Execução: [{Erro.StackTrace}]");
             }
             return new JsonResult(MensagensEntidades.ErroInesperado);
         }

@@ -61,6 +61,15 @@ namespace Way.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cadastro de Pessoa.
+        /// </summary>
+        public static string CadastroPessoa {
+            get {
+                return ResourceManager.GetString("CadastroPessoa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cadastro de Usuário.
         /// </summary>
         public static string CadastroUsuario {
